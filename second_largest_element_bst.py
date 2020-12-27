@@ -34,5 +34,5 @@ def find_second_largest(root_node):
 
     if root_node.right and (not root_node.right.left and not root_node.right.right):
         return root_node.value
-
+    # otherwise: the largest and 2nd largest are in the right subtree ( that should have several nodes )
     return find_second_largest(root_node.right)
