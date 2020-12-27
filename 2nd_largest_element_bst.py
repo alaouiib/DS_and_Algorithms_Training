@@ -6,7 +6,8 @@ def find_rightmost(root_node):
         return find_rightmost(root_node.right)
     return root_node.value
 
-
+# Complexity: O(h) Time and Space
+# h is the height of the tree
 def find_second_largest(root_node):
 
     # Find the second largest item in the binary search tree
