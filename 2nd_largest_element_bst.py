@@ -1,3 +1,12 @@
+
+def find_rightmost_soft(root_node):
+
+    current = root_node
+    while current:
+        if not current.right:
+            return current.value
+        current = current.right
+
 def find_rightmost(root_node):
     if root_node is None:
         raise ValueError('Tree must have at least 1 node')
@@ -6,7 +15,7 @@ def find_rightmost(root_node):
         return find_rightmost(root_node.right)
     return root_node.value
 
-# Complexity: O(h) Time and Space
+# Complexity: O(h) Time and Space, O(1) Space if we use find_rightmost_soft function
 # h is the height of the tree
 def find_second_largest(root_node):
 
