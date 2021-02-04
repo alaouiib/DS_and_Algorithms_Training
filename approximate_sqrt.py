@@ -3,7 +3,7 @@
 
 def approximate_sqrt(n: int, epsilon=0.001) -> float:
     # initialise guess, good value = n/2 (to avoid being on the stationary point or on the other side of the actual sqrt.)
-
+    # for more details: see https://youtu.be/K45mV2Mv-Ug
     guess = n/2
     while (guess**2 - n > epsilon):
         guess = (guess + n/guess)/2
