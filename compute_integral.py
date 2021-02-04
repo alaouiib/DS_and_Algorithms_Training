@@ -5,7 +5,10 @@ def f(x):
 
 def integral(f, a=0, b=2):
     """
-    We use rectangle method for that.
+    We use rectangle method for that: The rectangle method (also called the midpoint rule) 
+    is the simplest method in Mathematics used 
+    to compute an approximation of a definite integral.
+
     :type f: function (returns int)
     :type a: int
     :type b: int
