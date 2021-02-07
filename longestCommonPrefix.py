@@ -1,4 +1,5 @@
 from typing import List
+# Time-Complexity : O(m * n), m = length of the smallest string, n = total no. of strings in the list
 
 
 def longestCommonPrefix(strs: List[str]) -> str:
