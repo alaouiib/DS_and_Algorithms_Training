@@ -1,6 +1,6 @@
 
 def has_palindrome_permutation(the_string):
-    Check if any permutation of the input is a palindrome
+    # Check if any permutation of the input is a palindrome
     sol 1 perso
     l = len(the_string)
     s = set(the_string)
