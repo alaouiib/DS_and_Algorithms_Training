@@ -1,3 +1,7 @@
+
+# TODO: Priority Queue implementation (Example of imp: https://leetcode.com/problems/network-delay-time/discuss/329376/efficient-oe-log-v-python-dijkstra-min-heap-with-explanation)
+# ℹ Note that Dijkstra does not consider negatively weighted algorithms -> does not get you the shortest path always if there exist negative paths
+
 import pprint
 pp = pprint.PrettyPrinter(width=41, compact=True)
 
