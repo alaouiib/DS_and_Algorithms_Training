@@ -24,9 +24,8 @@ def DFS_traversal_iter(graph, start):
 
 # ------------
 
+## TODO: recursive, dealing with left and right trees
 # recursive
-
-
 def DFS_traversal_rec(graph, start, visited=None):
 
     if visited is None:
