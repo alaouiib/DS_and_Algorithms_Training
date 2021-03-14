@@ -2,7 +2,7 @@
 # Complexity
 # O(1) time and O(1) space.
 
-But be careful—there are some potential problems with this implementation:
+# ⚠ there are some potential problems with this implementation:
 
 # First, it doesn't work for deleting the last node in the list. We could change the node we're deleting to have a value of None, but the second-to-last node's next pointer would still point to a node, even though it should be None. This could work—we could treat this last, "deleted" node with value None as a "dead node" or a "sentinel node," and adjust any node traversing code to stop traversing when it hits such a node. The trade-off there is we couldn't have non-dead nodes with values set to None. Instead we chose to throw an exception in this case.
 # Second, this technique can cause some unexpected side-effects. For example, let's say we call:
