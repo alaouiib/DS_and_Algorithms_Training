@@ -49,19 +49,16 @@ Using Stack:
 def reverse_using_stack(head_of_list):
     if not head_of_list:
         return None
-        
+      
     stack = []
     while head_of_list:
         stack.append(head_of_list)
         head_of_list = head_of_list.next
         
-    head = stack.pop()
-    temp = head
-       
-    # head = None
+    head = temp = stack.pop()
+
     while stack:
         node = stack.pop()
-        
         temp.next = node
         temp = node
     temp.next = None
