@@ -23,3 +23,34 @@ def contains_cycle(first_node):
         
     
     return False
+
+
+
+
+"""
+Explanation:
+let's make two variables, slow_runner and fast_runner. 
+We’ll start both on the first node, and every time slow_runner advances one node,
+we’ll have fast_runner advance two nodes.
+
+If fast_runner catches up with slow_runner, we know we have a loop.
+If not, eventually fast_runner will hit the end of the linked list and we'll know we don't have a loop.
+"""
+# Complexity: Time O(n), Space O(1):
+def contains_cycle_space_optimised(first_node):
+
+    # Check if the linked list contains a cycle
+    if first_node:
+        # cache = set()
+        slow_runner = first_node
+        fast_runner = first_node
+        counter = 0
+        while slow_runner:
+            while fast_runner:
+                counter = counter + 1
+                fast_runner = fast_runner.next
+                if counter == 2:
+                    slow_runner = slow_runner.next
+                    counter = 0
+                if fast_runner == slow_runner: return True
+                if fast_runner == None: return False
