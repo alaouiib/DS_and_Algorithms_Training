@@ -54,3 +54,4 @@ def contains_cycle_space_optimised(first_node):
                     counter = 0
                 if fast_runner == slow_runner: return True
                 if fast_runner == None: return False
+return False
