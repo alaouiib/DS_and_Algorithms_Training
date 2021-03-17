@@ -1,6 +1,19 @@
 ## Q: Write a function contains_cycle() that takes the first node in a singly-linked 
 ## list and returns a boolean indicating whether the list contains a cycle.
 
+
+""" Tests to be passed:
+
+test_cycle_loops_to_beginning (__main__.Test) ... ok
+test_cycle_loops_to_middle (__main__.Test) ... ok
+test_empty_list (__main__.Test) ... ok
+test_linked_list_with_no_cycle (__main__.Test) ... ok
+test_one_element_linked_list_cycle (__main__.Test) ... ok
+test_one_element_linked_list_no_cycle (__main__.Test) ... ok
+test_two_node_cycle_at_end (__main__.Test) ... ok
+
+"""
+
 # Complexity: Time O(n), Space O(n):
 def contains_cycle(first_node):
 
