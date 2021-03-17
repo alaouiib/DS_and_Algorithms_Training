@@ -9,6 +9,7 @@ Q: reverse a linked list
 """
 
 
+# In-place reversal
 ## O(n) time and O(1) space.
 ## We pass over the list only once, and maintain a constant number
 ## of variables in memory.
@@ -32,3 +33,38 @@ def reverse(head_of_list):
         current_node = next_node
 
     return previous_node
+
+  # Out-of-place reversal
+  
+  # out place using stack
+"""
+Using Stack:
+
+-Store the nodes(values and address) in the stack until all the values are entered.
+-Once all entries are done, Update the Head pointer to the last location(i.e the last value).
+-Start popping the nodes(value and address) and store them in the same order until the stack is empty.
+-Update the next pointer of last Node in the stack by NULL.
+
+"""
+def reverse_using_stack(head_of_list):
+    if not head_of_list:
+        return None
+        
+    stack = []
+    while head_of_list:
+        stack.append(head_of_list)
+        head_of_list = head_of_list.next
+        
+    head = stack.pop()
+    temp = head
+       
+    # head = None
+    while stack:
+        node = stack.pop()
+        
+        temp.next = node
+        temp = node
+    temp.next = None
+    
+    return head
+    
