@@ -5,17 +5,17 @@ def contains_cycle(first_node):
 
     # Check if the linked list contains a cycle
     if first_node:
-        it = first_node.next
+        node = first_node.next
         cache = set()
-        while it:
-            cache.add(it)
+        while node:
+            cache.add(node)
             
-            if it.next == first_node:
+            if node.next == first_node:
                 return True
-            if it.next.next and it.next.next in cache:
+            if node.next.next and node.next.next in cache:
                 return True
-            if not it.next.next: return False
-            
-            it = it.next
-        return False
-    else: return False
+            if not node.next.next: return False
+            # move to the next node
+            node = node.next
+        
+    return False
