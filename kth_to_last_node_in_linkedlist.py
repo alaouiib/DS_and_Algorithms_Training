@@ -38,8 +38,6 @@ def kth_to_last_node(k, head):
         if first_node.next:
             first_node = first_node.next
         else: break
-
-    print(k,len(store))
     
     if k == 0 or k > len(store):
         raise Exception('k is bigger than the length of the store')
