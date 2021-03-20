@@ -24,5 +24,20 @@ d.next = e
 kth_to_last_node(2, a)
 """
 
-def kth_to_last_node_in_linkedlist(2, head):
-  return head
+def kth_to_last_node(k, head):
+
+    # Return the kth to last node in the linked list
+
+    if head is None:
+        return None
+    first_node = head
+    store = []
+    while head is not None and head.next is not None:
+        store.append(head)
+        first_node = first_node.next
+    
+    
+    return store[-k]
+
+
+
