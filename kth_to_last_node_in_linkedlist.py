@@ -30,14 +30,22 @@ def kth_to_last_node(k, head):
 
     if head is None:
         return None
+
     first_node = head
     store = []
-    while head is not None and head.next is not None:
-        store.append(head)
-        first_node = first_node.next
+    while first_node is not None:
+        store.append(first_node)
+        if first_node.next:
+            first_node = first_node.next
+        else: break
+
+    print(k,len(store))
     
-    
+    if k == 0 or k > len(store):
+        raise Exception('k is bigger than the length of the store')
+
     return store[-k]
+
 
 
 
