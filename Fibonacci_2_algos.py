@@ -56,6 +56,21 @@ def fibonacci_bottom_up(n):
     
     return current
 
+
+"""
+# Fibonacci Series using Dynamic Programming (bottom up)
+def fibonacci(n):
+     
+    # Taking 1st two fibonacci nubers as 0 and 1
+    f = [0, 1]
+     
+     
+    for i in range(2, n+1):
+        f.append(f[i-1] + f[i-2])
+    return f[n]
+
+"""
+
 """
 TODO: Fibonacci using Matrix multiplication => O(log(n))
 """
