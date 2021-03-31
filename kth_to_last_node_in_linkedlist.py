@@ -23,7 +23,29 @@ d.next = e
 # Returns the node with value "Devil's Food" (the 2nd to last node)
 kth_to_last_node(2, a)
 """
+# 1st  Solution: O(n) Time and Space
+# def kth_to_last_node(k, head):
 
+#     # Return the kth to last node in the linked list
+
+#     if head is None:
+#         return None
+
+#     first_node = head
+#     store = []
+#     while first_node is not None:
+#         store.append(first_node)
+#         if first_node.next:
+#             first_node = first_node.next
+#         else: break
+    
+#     if k == 0 or k > len(store):
+#         raise Exception('k is bigger than the length of the store')
+
+#     return store[-k]
+
+
+# 2nd solution: O(n) time and O(1) space, where n is the length of the list.
 def kth_to_last_node(k, head):
 
     # Return the kth to last node in the linked list
@@ -32,17 +54,22 @@ def kth_to_last_node(k, head):
         return None
 
     first_node = head
-    store = []
-    while first_node is not None:
-        store.append(first_node)
-        if first_node.next:
-            first_node = first_node.next
-        else: break
+    counter = 1
     
-    if k == 0 or k > len(store):
+    while first_node.next is not None:
+        first_node = first_node.next
+        counter += 1
+        
+    res = head
+    
+    for i in range(counter-k):
+        res = res.next
+        
+    if k == 0 or k > counter:
         raise Exception('k is bigger than the length of the store')
 
-    return store[-k]
+        
+    return res
 
 
 
