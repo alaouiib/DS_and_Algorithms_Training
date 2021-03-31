@@ -71,6 +71,14 @@ def kth_to_last_node(k, head):
         
     return res
 
+  """ 
+## What We Learned
+
+We listed two good solutions. One seemed to solve the problem in one pass, while the other took two passes. But the single-pass approach didn't take half as many steps, it just took the same steps in a different order.
+
+So don't be fooled: "one pass" isn't always fewer steps than "two passes." Always ask yourself, "Have I actually changed the number of steps?"
+  
+  """
 
 
 
