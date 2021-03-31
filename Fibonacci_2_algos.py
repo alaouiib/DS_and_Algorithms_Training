@@ -18,8 +18,6 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 # ~ O(n) Time
-
-
 def fibonacci_optimized(n):
     cache = {}
     if n in cache:
@@ -34,7 +32,29 @@ def fibonacci_optimized(n):
     result = fibonacci_optimized(n - 1) + fibonacci_optimized(n - 2)
     cache[n] = result
     return result
+# bottom up approach
+## O(n) time and O(1) space.
+def fibonacci_bottom_up(n):
 
+    # Compute the nth Fibonacci number
+
+    if n<0:
+        raise ValueError(' no such thing as a negative index in a series')
+    
+    if n in [0,1]:
+        return n
+    
+    prev_prev = 0
+    prev = 1
+    
+    # start building the serie from the bottom up 
+    for _ in range(n-1):
+        current = prev + prev_prev
+        prev_prev = prev
+        prev = current
+        
+    
+    return current
 
 """
 TODO: Fibonacci using Matrix multiplication => O(log(n))
